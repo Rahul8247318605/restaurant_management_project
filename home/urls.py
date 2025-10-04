@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import MenuCategoryListAPIView
+from .views import TableDetailView
 
 urlpatterns = [
-    path('categories/', MenuCategoryListAPIView.as_view(), name='category-list'),
+    path('api/tables/<int:pk>/',TableDetailView.as_view(), name='table-detail'),
 ]
